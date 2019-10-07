@@ -1,5 +1,9 @@
-let foo = 'bar';
+const express = require('express')
+const app = express()
 
-if (foo) {
-    console.log(foo.toString());
-}
+app.get('/', (req, res) => {
+    console.log('index');
+    res.send('index');
+})
+
+app.listen(3000)
